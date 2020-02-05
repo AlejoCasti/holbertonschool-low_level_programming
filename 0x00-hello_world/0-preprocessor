@@ -1,2 +1,2 @@
 #!/bin/bash
-./prueba.c
+gcc -E $CFILE > c
