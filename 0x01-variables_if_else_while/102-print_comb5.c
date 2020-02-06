@@ -14,9 +14,11 @@ for (j = 0; j < 10; j++)
 {
 for (z = 0; z < 10; z++)
 {
-for (y = j + 1; y < 10; y++)
+for (y = 0; y < 10; y++)
 {
-if (y > j && z >= i)
+if (y >= j && z >= i)
+{
+if (!((i == z) && (j == y)))
 {
 putchar('0' + i);
 putchar('0' + j);
@@ -33,6 +35,7 @@ putchar(' ');
 }
 }
 }
-putchar ('\n');
+}
+putchar('\n');
 return (0);
 }
