@@ -16,7 +16,7 @@ for (z = 0; z < 10; z++)
 {
 for (y = j + 1; y < 10; y++)
 {
-if (y >= j + 1 || z >= i + 1)
+if (y >= j + 1 || z >= i)
 {
 putchar('0' + i);
 putchar('0' + j);
