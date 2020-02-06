@@ -1,4 +1,4 @@
-#include <stdio.h>
+B#include <stdio.h>
 #include <unistd.h>
 /* more headers goes there */
 
@@ -6,7 +6,8 @@
 int main(void)
 {
   char z;
-  for(z = 'a'; z <= 'z'; z++) {
+  for (z = 'a'; z <= 'z'; z++)
+  {
     putchar(z);
   }
   putchar('\n');

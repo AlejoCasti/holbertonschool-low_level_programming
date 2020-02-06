@@ -5,12 +5,17 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-  int numero = 0;
+  char numero;
   while (numero < 10)
-  {
-    printf ("%i", numero);
+  { 
+    putchar('0' + numero);
+    if (numero != 9)
+    {
+    putchar(',');
+    putchar(' ');
+    }
     numero++;
   }
-  printf("\n");
+  putchar('\n');
   return (0);
 }
