@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <unistd.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-  char z;
-  for (z = 'z'; z >= 'a'; z--)
-  {
-    putchar(z);
-  }
-  putchar('\n');
-  return (0);
+char z;
+for (z = 'z'; z >= 'a'; z--)
+{
+putchar(z);
+}
+putchar('\n');
+return (0);
 }

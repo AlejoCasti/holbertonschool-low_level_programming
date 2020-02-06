@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <unistd.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-  int numero = 0;
-  while (numero < 10)
-  {
-    printf ("%i", numero);
-    numero++;
-  }
-  printf("\n");
-  return (0);
+int numero = 0;
+while (numero < 10)
+{
+printf("%i", numero);
+numero++;
+}
+printf("\n");
+return (0);
 }
