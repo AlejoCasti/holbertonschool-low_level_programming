@@ -18,7 +18,7 @@ for (y = 0; y < 10; y++)
 {
 if (y >= j && z >= i)
 {
-if (i < z || ( i == z && j < y))
+if (i < z || (i == z && j < y))
 {
 putchar('0' + i);
 putchar('0' + j);
