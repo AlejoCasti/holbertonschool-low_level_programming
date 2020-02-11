@@ -29,7 +29,7 @@ int main(void)
 	for (i = 1; i < 50; i++)
 	{
 		if (i < 3)
-			imprimir(i);
+			_putchar('0' + i);
 		else
 		{
 			temp = n2;
