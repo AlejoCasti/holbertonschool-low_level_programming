@@ -24,20 +24,19 @@ int main(void)
 {
 	int i;
 
-	long n1 = 0, n2 = 1, temp;
+	long n1 = 0, n2 = 1, temp, suma;
 
-	for (i = 1; n2 <= 4000000; i++)
+	for (i = 0; i < 50; i++)
 	{
-		if ((i % 2) == 0)
+		temp = n2;
+		n2 = n1 + n2;
+		n1 = temp;
+		if (n2 % 2 == 0 && n2 < 4000000)
 		{
-			temp = n2;
-			n2 = n1 + n2;
-			n1 = temp;
-			imprimir(n2);
-			_putchar(',');
-			_putchar(' ');
+			suma += n2;
 		}
 	}
+	imprimir(suma);
 	_putchar('\n');
 	return (0);
 }
