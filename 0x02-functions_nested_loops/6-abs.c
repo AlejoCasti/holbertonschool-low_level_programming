@@ -2,11 +2,11 @@
 #include <inttypes.h>
 #include <stdlib.h>
 /**
- * main - check the code for Holberton School students.
- *
+ * _abs - check the code for Holberton School students.
+ * @a: Number of value
  * Return: Always 0.
  */
 int _abs(int a)
 {
-	return(abs(a));
+	return (abs(a));
 }

@@ -2,20 +2,21 @@
 #include <inttypes.h>
 #include <stdlib.h>
 /**
- * main - check the code for Holberton School students.
- *
+ * print_last_digit - check the code for Holberton School students.
+ *@a: Number of value
  * Return: Always 0.
  */
 int print_last_digit(int a)
 {
-	int b = a%10;
+	int b = a % 10;
+
 	if (b >= 0)
 		_putchar('0' + b);
-	else 
+	else
 	{
 		_putchar('0' + (-b));
-		return(-b);
+		return (-b);
 	}
 
-	return(b);
+	return (b);
 }
