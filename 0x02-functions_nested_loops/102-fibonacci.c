@@ -24,20 +24,15 @@ int main(void)
 {
 	int i;
 
-	long n1 = 1, n2 = 2, temp;
+	long n1 = 0, n2 = 1, temp;
 
 	for (i = 1; i <= 50; i++)
 	{
-		if (i < 3)
-			_putchar('0' + i);
-		else
-		{
-			temp = n2;
-			n2 = n1 + n2;
-			n1 = temp;
-			imprimir(n2);
-		}
-		if (i != 49)
+		temp = n2;
+		n2 = n1 + n2;
+		n1 = temp;
+		imprimir(n2);
+		if (i != 50)
 		{
 			_putchar(',');
 			_putchar(' ');
