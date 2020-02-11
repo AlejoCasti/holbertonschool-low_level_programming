@@ -1,77 +1,54 @@
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
- *
+ * imprimir - check the code for Holberton School students.
+ * @n: Number of value.
  * Return: Always 0.
  */
-void print_to_98(int n)
+void imprimir(int n)
 {
-	
-	if (n < 98)
+	if (n < 0)
 	{
-		for (n = n; n <= 98; n++)
+		_putchar('-');
+		n = -n;
+	}
+	if (n / 10)
+		imprimir(n / 10);
+	_putchar(n % 10 + '0');
+}
+/**
+ * print_to_98X2 - Function to the task.
+ * @n: Number of value
+ * Return: Always 0.
+ */
+void print_to_98X2(int n)
+{
+	int b = 0;
+
+	do {
+		if (n <= 98)
 		{
-			if (n < 10 && n >= 0)
-				_putchar('0' + n);
-			else if (n >= 10)
-			{
-				_putchar('0' + n/10);
-				_putchar('0' + n%10);
-			}
-			if (n < 0)
-			{
-				if (n < 0 && n > -10)
-				{
-					_putchar('-');
-					_putchar('0'+ (-n));
-				}
-				if (n <= -10)
-				{
-					_putchar('-');
-					_putchar('0' + (-n)/10);
-					_putchar('0' + (-n)%10);
-				}
-				else if (n <= -100)
-				{
-					_putchar('-');
-					_putchar('0' + (-n)/10);
-					_putchar('0' + (-n)%100);
-					_putchar('0' + (-n)%10);
-				}
-			}
+			imprimir(n);
 			if (n != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
+			else
+				b = 1;
+			n++;
 		}
-	}
-	else if (n > 98)
-	{
-		for (n = n; n >= 98; n--)
+		else if (n >= 98)
 		{
-			if (n < 100)
-			{
-				_putchar('0' + n/10);
-				_putchar('0' + n%10);
-			}
-			else if (n >= 100)
-			{
-				_putchar('0' + n/100);
-				_putchar('0' + ((n%100)/10));
-				_putchar('0' + n%10);
-			}
+			imprimir(n);
 			if (n != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
+			else
+				b = 1;
+			n--;
 		}
-	}
-	else
-	{
-		_putchar('0' + 9);
-		_putchar('0' + 8);
-	}
+	} while (b == 0);
 	_putchar('\n');
 }
