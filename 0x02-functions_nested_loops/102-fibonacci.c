@@ -26,7 +26,7 @@ int main(void)
 
 	long n1 = 1, n2 = 2, temp;
 
-	for (i = 1; i < 50; i++)
+	for (i = 1; i <= 50; i++)
 	{
 		if (i < 3)
 			_putchar('0' + i);
