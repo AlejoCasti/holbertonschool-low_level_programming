@@ -33,6 +33,7 @@ int main(void)
 			temp = n2;
 			n2 = n1 + n2;
 			n1 = temp;
+			imprimir(n2);
 			_putchar(',');
 			_putchar(' ');
 		}
