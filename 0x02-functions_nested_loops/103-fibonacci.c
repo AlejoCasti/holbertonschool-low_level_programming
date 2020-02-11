@@ -24,7 +24,7 @@ int main(void)
 {
 	int i;
 
-	long n1 = 0, n2 = 1, temp, suma;
+	long n1 = 0, n2 = 1, temp, suma = 0;
 
 	for (i = 0; i < 50; i++)
 	{
@@ -32,9 +32,7 @@ int main(void)
 		n2 = n1 + n2;
 		n1 = temp;
 		if (n2 % 2 == 0 && n2 < 4000000)
-		{
 			suma += n2;
-		}
 	}
 	imprimir(suma);
 	_putchar('\n');
