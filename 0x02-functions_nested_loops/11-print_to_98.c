@@ -16,11 +16,11 @@ void imprimir(int n)
 	_putchar(n % 10 + '0');
 }
 /**
- * print_to_98X2 - Function to the task.
+ * print_to_98 - Function to the task.
  * @n: Number of value
  * Return: Always 0.
  */
-void print_to_98X2(int n)
+void print_to_98(int n)
 {
 	int b = 0;
 
