@@ -1,20 +1,4 @@
-#include "holberton.h"
-/**
- * imprimir - check the code for Holberton School students.
- * @n: NUmber of value
- * Return: Always 0.
- */
-void imprimir(unsigned long n)
-{
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-	if (n / 10)
-		imprimir(n / 10);
-	_putchar(n % 10 + '0');
-}
+#include <stdio.h>
 /**
  * main - check the code for Holberton School students.
  *
@@ -36,7 +20,7 @@ int main(void)
 			_putchar(',');
 			_putchar(' ');
 		}
-		imprimir(n2);
+		printf("%lu\n", n2);
 	}
 	_putchar('\n');
 	return (0);
