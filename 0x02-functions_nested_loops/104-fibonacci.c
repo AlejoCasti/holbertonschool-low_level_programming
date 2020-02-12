@@ -8,20 +8,20 @@ int main(void)
 {
 	int i;
 
-	unsigned long n1 = 0, n2 = 1, temp, suma = 0;
+	unsigned long n1 = 0, n2 = 1, temp;
 
 	for (i = 0; i < 98; i++)
 	{
 		temp = n2;
 		n2 = n1 + n2;
 		n1 = temp;
-		if (i != 0 && i != 97)
+		printf("%lu", n2);
+		if (i != 97)
 		{
-			_putchar(',');
-			_putchar(' ');
+			putchar(',');
+			putchar(' ');
 		}
-		printf("%lu\n", n2);
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }
