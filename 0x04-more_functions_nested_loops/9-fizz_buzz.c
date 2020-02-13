@@ -12,7 +12,8 @@ int main(void)
 	{
 		a % 3 == 0 && a % 5 == 0 ? printf("FizzBuzz") : a % 3 == 0 ?
 			printf("Fizz") : a % 5 == 0 ? printf("Buzz") : printf("%i", a);
-		printf(" ");
+		if (a != 100)
+			printf(" ");
 	}
 	putchar('\n');
 	return (0);
