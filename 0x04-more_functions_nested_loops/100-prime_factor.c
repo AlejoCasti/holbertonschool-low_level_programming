@@ -7,12 +7,13 @@
 int primos(unsigned long a)
 {
 	unsigned long int b;
+
 	for (b = 2; b != a; b++)
 	{
 		if (a % b == 0)
-			return(0);
+			return (0);
 	}
-	return(1);
+	return (1);
 }
 /**
  * main - check the code for Holberton School students.
@@ -21,8 +22,9 @@ int primos(unsigned long a)
  */
 int main(void)
 {
-	unsigned long size = 1231952, cont, numA = size;
-	for (cont = 2; cont != size-1; cont++)
+	unsigned long size = 612852475143, cont, numA = size;
+
+	for (cont = 2; cont != size - 1; cont++)
 	{
 		while (numA % cont == 0)
 		{
@@ -32,11 +34,11 @@ int main(void)
 				if (numA == 1)
 				{
 					printf("%lu", cont);
+					putchar('\n');
+					break;
 				}
 			}
-				
 		}
-		
 	}
-	return(0);
+	return (0);
 }
