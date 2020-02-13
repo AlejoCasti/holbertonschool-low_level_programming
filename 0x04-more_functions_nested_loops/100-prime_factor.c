@@ -21,15 +21,15 @@ int primos(unsigned long a)
  */
 int main(void)
 {
-	unsigned long size = 612852475143, cont, numA = size;
-	for (cont = 3; cont != size-1; cont++)
+	unsigned long size = 1231952, cont, numA = size;
+	for (cont = 2; cont != size-1; cont++)
 	{
 		while (numA % cont == 0)
 		{
 			if (primos(cont) == 1)
 			{
 				numA = numA / cont;
-				if (numA == 0)
+				if (numA == 1)
 				{
 					printf("%lu", cont);
 				}
