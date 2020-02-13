@@ -35,7 +35,7 @@ int main(void)
 				{
 					printf("%lu", cont);
 					putchar('\n');
-					return(0);
+					return (0);
 				}
 			}
 		}
