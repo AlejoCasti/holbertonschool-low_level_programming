@@ -6,14 +6,14 @@
  */
 void print_rev(char *s)
 {
-	int contador;
+	int contador = 0;
 
 	while (s[contador] != '\0')
 		contador++;
 
-	while (contador >= 0)
+	while (contador > 0)
 	{
-		_putchar(s[contador]);
+		_putchar(s[contador-1]);
 		contador--;
 	}
 	_putchar('\n');
