@@ -13,7 +13,7 @@ void puts_half(char *str)
 	n = (contador - 1) / 2;
 	while (str[n] != '\0')
 	{
-		_putchar(str[n+1]);
+		_putchar(str[n + 1]);
 		n++;
 	}
 	_putchar('\n');
