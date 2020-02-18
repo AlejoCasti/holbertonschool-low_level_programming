@@ -6,17 +6,17 @@
  */
 void puts_half(char *str)
 {
-	int contador = 0, cont2 = 0;
+	int contador = 0, n;
 
 	while (str[contador] != '\0')
 		contador++;
-	if ((contador - 1) % 2 != 0)
+	if (contador % 2 == 0)
 	{
-		while (str[cont2] != '\0')
+		n = (contador - 1) / 2;
+		while (n >= 0)
 		{
-			if (contador / 2 <= cont2)
-				_putchar(str[cont2]);
-			cont2++;
+			_putchar(str[(contador - 1) - n]);
+			n--;
 		}
 		_putchar('\n');
 	}
