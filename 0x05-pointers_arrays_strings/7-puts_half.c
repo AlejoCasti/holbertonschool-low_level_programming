@@ -10,7 +10,7 @@ void puts_half(char *str)
 
 	while (str[contador] != '\0')
 		contador++;
-	
+
 	while (str[cont2] != '\0')
 	{
 		if (contador / 2 <= cont2)
