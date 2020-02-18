@@ -13,7 +13,7 @@ void print_rev(char *s)
 
 	while (contador > 0)
 	{
-		_putchar(s[contador-1]);
+		_putchar(s[contador - 1]);
 		contador--;
 	}
 	_putchar('\n');
