@@ -10,10 +10,10 @@ void puts_half(char *str)
 
 	while (str[contador] != '\0')
 		contador++;
-	n = (contador - 1) / 2;
+	n = (contador + 1) / 2;
 	while (str[n] != '\0')
 	{
-		_putchar(str[n + 1]);
+		_putchar(str[n]);
 		n++;
 	}
 	_putchar('\n');
