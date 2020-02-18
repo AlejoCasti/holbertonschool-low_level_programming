@@ -6,7 +6,10 @@
  */
 void print_rev(char *s)
 {
-	int contador = _strlen(s);
+	int contador;
+
+	while (s[contador] != '\0')
+		contador++;
 
 	while (contador >= 0)
 	{
