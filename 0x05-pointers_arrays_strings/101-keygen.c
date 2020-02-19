@@ -11,8 +11,7 @@
 int main(void)
 {
 	int i, r, sum;
-	char array[63] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJ
-KLMNOPQRSTUVWXYZ0123456789";
+	char array[63] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	char password[100];
 
 	srand(time(NULL));
