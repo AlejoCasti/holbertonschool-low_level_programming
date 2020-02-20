@@ -10,7 +10,7 @@ char *cap_string(char *a)
 
 	while (a[i] != '\0')
 	{
-		while (!(a[i] >= 97 && a[i] <= 122))
+		while(!(a[i] >= 97 && a[i] <= 122))
 		{
 			i++;
 			continue;
@@ -26,6 +26,7 @@ char *cap_string(char *a)
 		    a[i - 1] == '{' ||
 		    a[i - 1] == '}' ||
 		    a[i - 1] == 10 ||
+		    a[i - 1] == 0 ||
 		    a[i - 1] == 9 ||
 		    a[i - 1] == 32)
 			a[i] -= 32;
