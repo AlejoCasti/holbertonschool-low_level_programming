@@ -6,17 +6,12 @@
  */
 char *cap_string(char *a)
 {
-	int i = 0, car = 0;
+	int i = 0;
 
 	while (a[i] != '\0')
 	{
-		if (a[i] >= 97 && a[i] <= 122)
+		while(!(a[i] >= 97 && a[i] <= 122))
 		{
-			if (car == 1)
-			{
-				a[i] -= 32;
-				car = 0;
-			}
 			i++;
 			continue;
 		}
@@ -30,10 +25,10 @@ char *cap_string(char *a)
 		    a[i - 1] == ')' ||
 		    a[i - 1] == '{' ||
 		    a[i - 1] == '}' ||
-		    a[i - 1] == '\n' ||
-		    a[i - 1] == '\t' ||
-		    a[i - 1] == ' ')
-			car = 1;
+		    a[i - 1] == 10 ||
+		    a[i - 1] == 9 ||
+		    a[i - 1] == 32)
+			a[i] -= 32;
 		i++;
 	}
 	return (a);
