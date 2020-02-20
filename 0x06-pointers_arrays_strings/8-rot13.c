@@ -16,7 +16,10 @@ char *rot13(char *a)
 		while (dic[j] != '\0')
 		{
 			if (a[i] == dic[j])
+			{
 				a[i] = leet[j];
+				break;
+			}
 			j++;
 		}
 	}
