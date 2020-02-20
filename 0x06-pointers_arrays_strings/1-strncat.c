@@ -3,7 +3,7 @@
  * _strncat - check the code for Holberton School students.
  * @dest: destination pointer
  * @src: Sources pointer
- * @n: 
+ * @n: size of array
  * Return: Always 0.
  */
 char *_strncat(char *dest, char *src, int n)
