@@ -10,7 +10,7 @@ char *cap_string(char *a)
 
 	while (a[i] != '\0')
 	{
-		while(!(a[i] >= 97 && a[i] <= 122))
+		while (!(a[i] >= 97 && a[i] <= 122))
 		{
 			i++;
 			continue;
