@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 /**
  * _strchr - prints buffer in hexa
@@ -10,8 +11,8 @@ char *_strchr(char *s, char c)
 	while (s[0] != '\0')
 	{
 		if (s[0] == c)
-			return(s);
+			return (s);
 		s++;
 	}
-	return (s);
+	return (NULL);
 }
