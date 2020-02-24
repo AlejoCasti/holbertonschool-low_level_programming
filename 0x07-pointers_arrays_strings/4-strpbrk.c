@@ -21,6 +21,6 @@ char *_strpbrk(char *s, char *accept)
 	}
 	if (s[0] == '\0')
 		return (NULL);
-	else 
+	else
 		return (s);
 }
