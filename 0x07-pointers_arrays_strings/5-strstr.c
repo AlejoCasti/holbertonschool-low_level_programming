@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * _strstr - prints buffer in hexa
  * @haystack: the address of memory to print
@@ -22,5 +23,8 @@ char *_strstr(char *haystack, char *needle)
 			return (haystack);
 		haystack++;
 	}
-	return (haystack);
+	if (haystack[0] == '\0')
+		return (NULL);
+	else
+		return (haystack);
 }
