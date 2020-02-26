@@ -24,7 +24,7 @@ int getPal(char *s, int size)
 	{
 		if (*s == *(s + size))
 		{
-			getPal(s + 1, size - 1);
+			return (1 * (getPal(s + 1, size - 2)));
 		}
 		else
 			return (0);
