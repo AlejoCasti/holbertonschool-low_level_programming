@@ -32,7 +32,12 @@ int wildcmp1(char *s1, char *s2, int allow)
 		else
 		{
 			if (allow == 1)
-				return (1);
+			{
+				if (*(s2-1) != '*')
+					return (0);
+				else
+					return (1);
+			}
 			else
 				return (0);
 		}
@@ -54,8 +59,5 @@ int wildcmp1(char *s1, char *s2, int allow)
  */
 int wildcmp(char *s1, char *s2)
 {
-	if (*s1 == 'a')
-		return (0);
-	else
-		return (wildcmp1(s1, s2, 0));
+	return (wildcmp1(s1, s2, 0));
 }
