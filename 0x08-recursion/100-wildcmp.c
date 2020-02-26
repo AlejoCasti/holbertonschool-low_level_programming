@@ -32,12 +32,10 @@ int wildcmp1(char *s1, char *s2, int allow)
 		else
 		{
 			if (allow == 1)
-			{
-				if (*(s2-1) != '*')
+				if (*(s2 - 1) != '*')
 					return (0);
 				else
 					return (1);
-			}
 			else
 				return (0);
 		}
