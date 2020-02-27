@@ -1,0 +1,17 @@
+#include "holberton.h"
+#include <stdio.h>
+/**
+ * print_number - Checks for digit character.
+ * @n: Number of value
+ * Return: none.
+ */
+void print_buffer(char *b, int size);
+{
+	int i;
+	for (i = 0; i < size; i++)
+	{
+		printf("%c", b[i]);
+		if (i % 10 == 0)
+			putchar('\n');
+	}
+}
