@@ -1,0 +1,1 @@
+This project i use the argv and argc variables
