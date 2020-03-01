@@ -1,6 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+/**
+ * isdig - Validate a digit char
+ * @c: Pointer to the char
+ * Return: 1 if this is a digit 0 if is not.
+ */
+int isdig(char *c)
+{
+	int i = 0;
+
+	while (c[i] != '\0')
+	{
+		if (c[i] >= 48 && c[i] <= 57)
+			i++;
+		else
+			return (0);
+	}
+	return (1);
+}
 /**
  * main - Adds numbers
  * @argc: Size of input array
@@ -15,7 +32,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isdigit(*argv[i]))
+			if (isdig(argv[i]) == 1)
 				suma += atoi(argv[i]);
 			else
 			{
