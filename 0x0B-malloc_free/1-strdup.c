@@ -8,14 +8,9 @@
  */
 int str_len(char *s)
 {
-	int i = 0;
-
-	while (*s)
-	{
-		i++;
-		s++;
-	}
-	return (i);
+	if (*s)
+		return(1 + str_len(s + 1));
+	return (0);
 }
 /**
  * _strdup - documentation
@@ -35,7 +30,5 @@ char *_strdup(char *str)
 	for (i = 0; i < size; i++)
 		p[i] = str[i];
 	p[i] = '\0';
-	if (!str)
-		return (NULL);
 	return (p);
 }
