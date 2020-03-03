@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 /**
  * str_len - documentation
@@ -9,7 +8,7 @@
 int str_len(char *s)
 {
 	if (*s)
-		return(1 + str_len(s + 1));
+		return (1 + str_len(s + 1));
 	return (0);
 }
 /**
@@ -22,10 +21,10 @@ char *_strdup(char *str)
 	if (!str)
 		return (NULL);
 	int size = str_len(str);
-	char *p = malloc(size * sizeof(char));
+	char *p = malloc(size + 1 * sizeof(char));
 	int i;
 
-       	if (!p)
+	if (!p)
 		return (NULL);
 	for (i = 0; i < size; i++)
 		p[i] = str[i];
