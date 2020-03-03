@@ -31,8 +31,6 @@ char *_strdup(char *str)
 
 	if (size == 0)
 		return (NULL);
-	if (!str)
-		return (NULL);
 	if (!p)
 		return (NULL);
 	for (i = 0; i < size; i++)
