@@ -11,7 +11,7 @@ int str_len(char *s)
 	{
 		return (0);
 	}
-	else 
+	else
 	{
 		if (*s)
 			return (1 + str_len(s + 1));
