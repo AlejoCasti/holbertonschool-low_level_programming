@@ -11,10 +11,12 @@ int str_len(char *s)
 	{
 		return (0);
 	}
-	else if (*s)
-		return (1 + str_len(s + 1));
-	else
-		return (0);
+	else 
+	{
+		if (*s)
+			return (1 + str_len(s + 1));
+	}
+	return (0);
 }
 /**
  * _strdup - documentation
@@ -26,6 +28,7 @@ char *_strdup(char *str)
 	int size = str_len(str);
 	char *p = malloc(size + 1 * sizeof(char));
 	int i;
+
 	if (size == 0)
 		return (NULL);
 	if (!str)
