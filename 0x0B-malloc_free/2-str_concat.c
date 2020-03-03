@@ -7,7 +7,9 @@
 int str_len(char *s)
 {
 	if (s == NULL)
+	{
 		return (0);
+	}
 	else
 	{
 		if (*s)
