@@ -18,12 +18,11 @@ int str_len(char *s)
  */
 char *_strdup(char *str)
 {
-	if (!str)
-		return (NULL);
 	int size = str_len(str);
 	char *p = malloc(size + 1 * sizeof(char));
 	int i;
-
+	if (!str)
+		return (NULL);
 	if (!p)
 		return (NULL);
 	for (i = 0; i < size; i++)
