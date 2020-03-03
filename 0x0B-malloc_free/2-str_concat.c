@@ -6,8 +6,13 @@
  */
 int str_len(char *s)
 {
-	if (*s)
-		return (1 + str_len(s + 1));
+	if (s == NULL)
+		return (0);
+	else
+	{
+		if (*s)
+			return (1 + str_len(s + 1));
+	}
 	return (0);
 }
 /**
@@ -23,6 +28,10 @@ char *str_concat(char *s1, char *s2)
 	char *p = malloc((size1 * sizeof(char)) + (size2 + 1 * sizeof(char)));
 	int i;
 
+	if (size1 == 0)
+		s1 = "";
+	if (size2 == 0)
+		s2 = "";
 	if (!p)
 		return (NULL);
 	for (i = 0; i < size1; i++)
