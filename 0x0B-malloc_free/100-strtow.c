@@ -29,6 +29,8 @@ char **strtow(char *str)
 	char **p;
 	int numWord = numWords(str), i = 0, j = 0;
 
+	if (!str || *str == "")
+		return (NULL);
 	p = malloc(sizeof(char *) * numWord + 1);
 	if (!p)
 		return (NULL);
@@ -43,7 +45,7 @@ char **strtow(char *str)
 					j++;
 				p[i] = malloc(sizeof(char) * j + 1);
 				if (!p[i])
-					return (0);
+					return (NULL);
 				j = 0;
 				while (*str != ' ')
 				{
