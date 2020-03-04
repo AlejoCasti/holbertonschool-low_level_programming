@@ -46,12 +46,7 @@ char **strtow(char *str)
 					j++;
 				p[i] = malloc(sizeof(char) * j + 1);
 				if (p[i] == NULL)
-				{
-					for (j = 0; j < i; j++)
-						free(p[j]);
-					free(p);
 					return (NULL);
-				}
 				j = 0;
 				while (*str != ' ')
 				{
