@@ -27,12 +27,13 @@ int numWords(char *str)
 char **strtow(char *str)
 {
 	char **p;
-	int numWord = numWords(str), i = 0, j = 0;
+	int numWord, i = 0, j = 0;
 
+	if (str == NULL)
+		return (NULL);
+	numWord = numWords(str);
 	p = malloc(sizeof(char *) * numWord + 1);
 	if (!p)
-		return (NULL);
-	if (!str)
 		return (NULL);
 	while (*str)
 	{
