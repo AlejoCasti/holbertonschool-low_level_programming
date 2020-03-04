@@ -8,14 +8,14 @@ int numWords(char *str)
 {
 	int contador = 0, z = 0;
 
-	while (str[z] != 0)
+	while (str[z] != '\0')
 	{
 		if (str[z] != ' ')
 		{
 			if (str[z - 1] == ' ' || z == 0)
 				contador++;
 		}
-		str++;
+		z++;
 	}
 	return (contador);
 }
@@ -39,7 +39,7 @@ char **strtow(char *str)
 		return (NULL);
 	while (str[z] != '\0')
 	{
-		if (*str != ' ')
+		if (str[z] != ' ')
 		{
 			if (str[z - 1] == ' ' || z == 0)
 			{
