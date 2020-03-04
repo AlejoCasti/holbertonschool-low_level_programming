@@ -32,7 +32,7 @@ char **strtow(char *str)
 	p = malloc(sizeof(char *) * numWord + 1);
 	if (!p)
 		return (NULL);
-	if (!str || *str == "")
+	if (!str)
 		return (NULL);
 	while (*str)
 	{
