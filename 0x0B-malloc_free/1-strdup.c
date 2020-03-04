@@ -1,40 +1,35 @@
 #include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
- * str_len - documentation
- * @s: pointer
- * Return: the lenght of the array
- */
-int str_len(char *s)
-{
-	if (s == NULL)
-	{
-		return (0);
-	}
-	else
-	{
-		if (*s)
-			return (1 + str_len(s + 1));
-	}
-	return (0);
-}
-/**
- * _strdup - documentation
- * @str: size of the array
- * Return: the new pointer
+ * _strdup - check the code for Holberton School students.
+ * @str: pointer
+ * Return: Always 0.
  */
 char *_strdup(char *str)
 {
-	int size = str_len(str);
-	char *p = malloc(size + 1 * sizeof(char));
-	int i;
+	int c = 0, s = 0;
 
-	if (size == 0)
+	char *d;
+
+	if (str == NULL)
 		return (NULL);
-	if (!p)
+	while (str[s] != '\0')
+	{
+		s++;
+		c++;
+	}
+	c = 0;
+	d = malloc(sizeof(char) * (s + 1));
+	if (d == NULL)
 		return (NULL);
-	for (i = 0; i < size; i++)
-		p[i] = str[i];
-	p[i] = '\0';
-	return (p);
+	while (c < (s + 1))
+	{
+		d[c] = str[c];
+		c++;
+	}
+
+	if (str == NULL)
+		return (NULL);
+	return (d);
 }
