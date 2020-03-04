@@ -1,36 +1,35 @@
 #include <stdlib.h>
 /**
- * alloc_grid - documentation
- * @width: width
- * @height: height
- * Return: the new pointer
+ * alloc_grid - check the code for Holberton School students.
+ * @width: pointer
+ * @height: pointer
+ * Return: Always 0.
  */
 int **alloc_grid(int width, int height)
 {
-	if (width > 0 && height > 0)
-	{
-		int *c;
-		int **p;
-		int i, j;
+	int i, j, k, l;
+	int **grid;
 
-		c = malloc(width * height * sizeof(int));
-		p = malloc(sizeof(*p) * width);
-		if (!c)
-			return (NULL);
-		if (!p)
-		{
-			free(c);
-			return (NULL);
-		}
-		for (i = 0; i < width; i++)
-		{
-			for (j = 0; j < height; j++)
-				c[i * height + j] = 0;
-		}
-		for (i = 0; i < width; i++)
-			p[i] = c + i * height;
-		return (p);
-	}
-	else
+	if (width <= 0 || height <= 0)
 		return (NULL);
+	grid = malloc(height * sizeof(int *));
+	if (grid == NULL)
+		return (NULL);
+	for (i = 0; i < height; i++)
+	{
+		grid[i] = malloc(width * sizeof(int));
+		if (grid[i] == NULL)
+		{
+			for (l = 0; l < i; l++)
+				free(grid[l]);
+			free(grid);
+			return (NULL);
+		}
+	}
+	for (j = 0; j < height; j++)
+	{
+		for (k = 0; k < width; k++)
+			grid[j][k] = 0;
+	}
+	return (grid);
 }
