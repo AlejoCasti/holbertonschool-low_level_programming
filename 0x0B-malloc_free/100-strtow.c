@@ -60,6 +60,6 @@ char **strtow(char *str)
 		}
 		str++;
 	}
-	p[numWords + 1] = NULL;
+	p[i] = NULL;
 	return (p);
 }
