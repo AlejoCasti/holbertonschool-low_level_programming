@@ -29,10 +29,10 @@ char **strtow(char *str)
 	char **p;
 	int numWord = numWords(str), i = 0, j = 0;
 
-	if (!str || *str == "")
-		return (NULL);
 	p = malloc(sizeof(char *) * numWord + 1);
 	if (!p)
+		return (NULL);
+	if (!str || *str == "")
 		return (NULL);
 	while (*str)
 	{
