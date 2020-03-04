@@ -33,6 +33,8 @@ char **strtow(char *str)
 		return (NULL);
 	numWord = numWords(str);
 	p = malloc(sizeof(char *) * numWord + 1);
+	if (numWord == 0)
+		return (NULL);
 	if (!p)
 		return (NULL);
 	while (str[z] != '\0')
