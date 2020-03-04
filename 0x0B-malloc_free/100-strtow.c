@@ -32,8 +32,6 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	numWord = numWords(str);
-	if (numWords == 0)
-		return (NULL);
 	p = malloc(sizeof(char *) * numWord + 1);
 	if (!p)
 		return (NULL);
@@ -62,6 +60,6 @@ char **strtow(char *str)
 		}
 		str++;
 	}
-	p[i] = NULL;
+	p[numWords + 1] = NULL;
 	return (p);
 }
