@@ -9,10 +9,12 @@ int **alloc_grid(int width, int height)
 {
 	if (width > 0 && height > 0)
 	{
-		int *c = malloc(width * height * sizeof(int));
-		int **p = malloc(sizeof(*p) * width);
+		int *c;
+		int **p;
 		int i, j;
 
+		c = malloc(width * height * sizeof(int));
+		p = malloc(sizeof(*p) * width);
 		if (!c)
 		{
 			free(c);
