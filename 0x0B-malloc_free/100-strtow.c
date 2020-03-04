@@ -6,13 +6,13 @@
  */
 int numWords(char *str)
 {
-	int contador = 0;
+	int contador = 0, z = 0;
 
-	while (*str)
+	while (str[z] != 0)
 	{
-		if (*str != ' ')
+		if (str[z] != ' ')
 		{
-			if (*(str - 1) == ' ')
+			if (str[z - 1] == ' ' || z == 0)
 				contador++;
 		}
 		str++;
@@ -27,7 +27,7 @@ int numWords(char *str)
 char **strtow(char *str)
 {
 	char **p;
-	int numWord, i = 0, j = 0;
+	int numWord, i = 0, j = 0, z = 0;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
@@ -35,30 +35,30 @@ char **strtow(char *str)
 	p = malloc(sizeof(char *) * numWord + 1);
 	if (!p)
 		return (NULL);
-	while (*str)
+	while (str[z] != '\0')
 	{
 		if (*str != ' ')
 		{
-			if (*(str - 1) == ' ')
+			if (str[z - 1] == ' ' || z == 0)
 			{
 				j = 0;
-				while (str[j] != ' ')
+				while (str[j + z] != ' ' && str[j + z] != '\0')
 					j++;
 				p[i] = malloc(sizeof(char) * j + 1);
 				if (p[i] == NULL)
 					return (NULL);
 				j = 0;
-				while (*str != ' ')
+				while (str[z] != ' ' && str[z] != '\0')
 				{
-					p[i][j] = *str;
+					p[i][j] = str[z];
 					j++;
-					str++;
+					z++;
 				}
 				p[i][j] = '\0';
 				i++;
 			}
 		}
-		str++;
+		z++;
 	}
 	p[i] = NULL;
 	return (p);
