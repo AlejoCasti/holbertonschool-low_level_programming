@@ -60,7 +60,8 @@ char **strtow(char *str)
 				i++;
 			}
 		}
-		z++;
+		if (str[z] != '\0')
+			z++;
 	}
 	p[i] = NULL;
 	return (p);
