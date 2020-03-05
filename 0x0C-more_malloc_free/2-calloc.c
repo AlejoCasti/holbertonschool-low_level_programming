@@ -7,7 +7,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
+	void *p;
 
 	if (!nmemb || !size)
 		return (NULL);
