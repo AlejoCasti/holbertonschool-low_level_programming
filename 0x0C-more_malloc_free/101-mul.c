@@ -42,6 +42,23 @@ void message(char *p)
 	_putchar('\n');
 }
 /**
+ * message_res - print a pointer
+ * @p: pointer to print
+ * Return: none
+ */
+void message_res(char *p)
+{
+	int i = 0;
+
+	if (*p == 0)
+		i++;
+	if (p[i] == 0 && p[i + 1] == 0)
+		_putchar('0');
+	for (; p[i]; i++)
+		_putchar(p[i] + '0');
+	_putchar('\n');
+}
+/**
  * main - Programa that multiplies two integers
  * @argc: number of arguments
  * @argv: array with the arguments
@@ -57,7 +74,7 @@ int main(int argc, char *argv[])
 		size1 = str_len(argv[1]);
 		size2 = str_len(argv[2]);
 		tam = size2 + size1;
-		p = malloc(sizeof(char) * (tam));
+		p = malloc(sizeof(char) * tam);
 		if (!p)
 			message(e);
 		for (i = size1 - 1; i >= 0; i--)
@@ -75,12 +92,7 @@ int main(int argc, char *argv[])
 				p[i + j] += cociente;
 			}
 		}
-		i = 0;
-		if (*p == 0)
-			i = 1;
-		for (; i <  tam; i++)
-			_putchar(p[i] + '0');
-		_putchar('\n');
+		message_res(p);
 		free(p);
 	}
 	else
