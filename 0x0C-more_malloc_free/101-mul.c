@@ -44,6 +44,7 @@ void message(char *p)
 /**
  * message_res - print a pointer
  * @p: pointer to print
+ * @tam: size of the arrays
  * Return: none
  */
 void message_res(char *p, int tam)
