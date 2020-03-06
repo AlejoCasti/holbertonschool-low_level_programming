@@ -46,7 +46,7 @@ void message(char *p)
  * @p: pointer to print
  * Return: none
  */
-void message_res(char *p)
+void message_res(char *p, int tam)
 {
 	int i = 0;
 
@@ -54,7 +54,7 @@ void message_res(char *p)
 		i++;
 	if (p[i] == 0 && p[i + 1] == 0)
 		_putchar('0');
-	for (; p[i]; i++)
+	for (; i < tam; i++)
 		_putchar(p[i] + '0');
 	_putchar('\n');
 }
@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 				p[i + j] += cociente;
 			}
 		}
-		message_res(p);
+		message_res(p, tam);
 		free(p);
 	}
 	else
