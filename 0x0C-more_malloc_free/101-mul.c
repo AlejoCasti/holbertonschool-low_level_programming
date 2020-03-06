@@ -53,7 +53,11 @@ void message_res(char *p, int tam)
 	if (*p == 0)
 		i++;
 	if (p[i] == 0 && p[i + 1] == 0)
+	{
 		_putchar('0');
+		_putchar('\n');
+		return;
+	}
 	for (; i < tam; i++)
 		_putchar(p[i] + '0');
 	_putchar('\n');
