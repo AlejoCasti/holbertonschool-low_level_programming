@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * _isdigit - Checks for digit character.
@@ -29,6 +29,19 @@ int str_len(char *s)
 	return (0);
 }
 /**
+ * message - print a pointer
+ * @p: pointer to print
+ * Return: none
+ */
+void message(char *p)
+{
+	int i;
+
+	for (i = 0; p[i]; i++)
+		_putchar(p[i]);
+	_putchar('\n');
+}
+/**
  * main - Programa that multiplies two integers
  * @argc: number of arguments
  * @argv: array with the arguments
@@ -38,6 +51,7 @@ int main(int argc, char *argv[])
 {
 	int size1, size2, cociente = 0, i, j, resul, tam;
 	char *p;
+	char e[] = "Error";
 
 	if (argc == 3)
 	{
@@ -46,7 +60,7 @@ int main(int argc, char *argv[])
 		tam = size2 + size1;
 		p = malloc(sizeof(char) * (tam));
 		if (!p)
-			printf("Error");
+			message(e);
 		for (i = size1 - 1; i >= 0; i--)
 		{
 			for (j = size2 - 1; j >= 0; j--)
@@ -66,10 +80,11 @@ int main(int argc, char *argv[])
 		if (*p == 0)
 			i = 1;
 		for (; i <  tam; i++)
-			printf("%d", p[i]);
-		printf("\n");
+			_putchar(p[i] + '0');
+		_putchar('\n');
+		free(p);
 	}
 	else
-		printf("Error\n");
+		message(e);
 	return (0);
 }
