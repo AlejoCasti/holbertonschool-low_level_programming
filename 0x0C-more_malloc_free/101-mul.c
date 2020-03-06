@@ -50,10 +50,9 @@ void message(char *p)
 int main(int argc, char *argv[])
 {
 	int size1, size2, cociente = 0, i, j, resul, tam;
-	char *p;
-	char e[] = "Error";
+	char *p, e[] = "Error";
 
-	if (argc == 3)
+	if (argc == 3 && _isdigit(argv[1]) == 1 && _isdigit(argv[2]) == 1)
 	{
 		size1 = str_len(argv[1]);
 		size2 = str_len(argv[2]);
@@ -85,6 +84,9 @@ int main(int argc, char *argv[])
 		free(p);
 	}
 	else
+	{
 		message(e);
+		exit(98);
+	}
 	return (0);
 }
