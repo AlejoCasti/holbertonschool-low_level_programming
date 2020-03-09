@@ -41,7 +41,7 @@ char *_strdup(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *newperrito;
+	dog_t *newperrito;
 	char *namecpy;
 	char *ownercpy;
 
