@@ -47,6 +47,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	ownercpy = _strdup(owner);
 	namecpy = _strdup(name);
+	if (!ownercpy || !namecpy)
+	{
+		free(ownercpy);
+		free(namecpy);
+		return (NULL);
+	}
 	newperrito = malloc(sizeof(struct dog));
 	if (!newperrito)
 		return (NULL);
