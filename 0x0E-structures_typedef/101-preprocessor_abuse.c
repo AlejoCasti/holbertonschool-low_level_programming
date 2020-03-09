@@ -1,1 +1,1 @@
-#error "Hello, Holberton\n"
+#pragma message ("Hello, Holberton\n")
