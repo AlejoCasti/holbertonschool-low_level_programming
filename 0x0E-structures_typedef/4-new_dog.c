@@ -1,6 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
-#include "dog.h"
+#include <string.h>
 /**
  * new_dog - Initilize the values of variables to new dog
  * @name: poiinter to the name of dog
@@ -15,8 +15,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	newperrito = malloc(sizeof(struct dog));
 	if (!newperrito)
 		return (NULL);
-	newperrito->name = name;
+	newperrito->name = strdup(name);
 	newperrito->age = age;
-	newperrito->owner = owner;
+	newperrito->owner = strdup(owner);
 	return (newperrito);
 }
