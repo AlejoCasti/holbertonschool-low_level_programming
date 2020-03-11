@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * main - principal program
- * @ac: numbers of args
- * @ag: args
+ * @argc: numbers of args
+ * @argv: args
  * Return: 0
  */
 int main(int argc, char *argv[])
