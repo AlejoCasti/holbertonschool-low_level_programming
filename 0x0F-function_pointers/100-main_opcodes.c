@@ -23,8 +23,8 @@ int main(int ac, char *ag[])
 	}
 	for (i = 0; i < atoi(ag[1]); i++)
 		if (i < atoi(ag[1]) - 1)
-			printf("%02X ", mainptr[i]);
+			printf("%02x ", mainptr[i]);
 		else
-			printf("%02X\n", mainptr[i]);
+			printf("%02x\n", mainptr[i]);
 	return (0);
 }
