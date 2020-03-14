@@ -20,5 +20,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 	if (n != 0)
 		printf("%i\n", va_arg(myList, int));
+	else
+		printf("\n");
 	va_end(myList);
 }
