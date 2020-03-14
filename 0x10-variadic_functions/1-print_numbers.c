@@ -18,6 +18,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		else
 			printf("%i", va_arg(myList, int));
 	}
-	printf("%i\n", va_arg(myList, int));
+	if (n != 0)
+		printf("%i\n", va_arg(myList, int));
 	va_end(myList);
 }
