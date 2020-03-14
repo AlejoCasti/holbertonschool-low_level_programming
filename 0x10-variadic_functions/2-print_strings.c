@@ -12,21 +12,28 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *s;
 
 	va_start(myList, n);
-	if (separator)
+
+	if (n != 0)
 	{
 		for (i = 0; i < n - 1; i++)
 		{
 			s = va_arg(myList, char *);
 			if (s != NULL)
-				printf("%s%s", s, separator);
+			{
+				if (separator)
+					printf("%s%s", s, separator);
+				else
+					printf("%s", s);
+			}
 			else
-				printf("(nil)");
+			printf("(nil)");
 		}
 		s = va_arg(myList, char *);
 		if (s != NULL)
-			printf("%s\n", s);
+			printf("%s", s);
 		else
-			printf("(nil)\n");
+			printf("(nil)");
 		va_end(myList);
 	}
+	printf("\n");
 }
