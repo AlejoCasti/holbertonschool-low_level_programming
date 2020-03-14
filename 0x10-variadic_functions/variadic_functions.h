@@ -11,7 +11,7 @@
 typedef struct op
 {
 	char op;
-	void (*f)();
+	void (*f)(va_list);
 } op_t;
 void print_all(const char * const format, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
