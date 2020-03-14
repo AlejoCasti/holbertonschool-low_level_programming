@@ -24,7 +24,7 @@ void p_string(va_list list)
 	char *a =  va_arg(list, char *);
 
 	if (a == NULL)
-		a = "(nill)";
+		a = "(nil)";
 	printf("%s", a);
 }
 /**
