@@ -2,7 +2,7 @@
 /**
  * add_node - print the list
  * @head: pointer to head
- * @str:pointer to copy 
+ * @str:pointer to copy
  * Return: number of nodes
  */
 list_t *add_node(list_t **head, const char *str)
