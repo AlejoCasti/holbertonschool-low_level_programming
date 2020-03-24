@@ -1,16 +1,15 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints a list
- * @head: pointer to the list
- * Return: number of nodes
+ * print_listint_safe - print
+ * @head: pointer to list
+ * Return: # nodes
  */
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t i, j;
-	const listint_t *tmp, *tmp_t;
+	const listint_t *tmp = head, *tmp_t;
 
-	tmp = head;
 	for (i = 0; tmp; i++)
 	{
 		tmp_t = head;
