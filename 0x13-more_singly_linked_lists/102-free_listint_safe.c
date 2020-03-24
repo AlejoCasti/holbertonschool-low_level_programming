@@ -8,18 +8,25 @@
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *tmp = *h, *tmp_t;
-	size_t i, j;
+	size_t i, j, bool = 0, max = 0;
 
 	for (i = 0; tmp; i++, tmp = tmp->next)
 	{
 		tmp_t = *h;
 		for (j = 0; i > j; j++, tmp_t = tmp_t->next)
+		{
 			if (tmp == tmp_t)
+			{
+				bool = 1;
 				break;
-		if (tmp == tmp_t)
+			}
+		}
+		if (j > max)
+			max = j;
+		if (bool == 1)
 			break;
 	}
-	for (i = 0; *h != tmp_t; i++)
+	for (i = 0; i < max; i++)
 	{
 		tmp = *h;
 		*h = (*h)->next;
