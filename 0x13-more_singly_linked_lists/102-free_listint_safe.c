@@ -37,6 +37,8 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *tmp;
 	size_t i, max;
 
+	if (!*h || !(*h)->next)
+		return (0);
 	max = aux(*h);
 	for (i = 0; i < max; i++)
 	{
