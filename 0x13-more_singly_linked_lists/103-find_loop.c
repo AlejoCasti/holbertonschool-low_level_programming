@@ -6,10 +6,12 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *tmp = head->next, *tmp_t = head->next->next;
+	listint_t *tmp, *tmp_t;
 
 	if (!head || !tmp)
 		return (NULL);
+	tmp = head->next;
+	tmp_t = head->next->next;
 	while (tmp && tmp_t && tmp_t->next)
 	{
 		if (tmp == tmp_t)
