@@ -8,6 +8,8 @@ listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *tmp = head->next, *tmp_t = head->next->next;
 
+	if (!head)
+		return (NULL);
 	while (tmp && tmp_t && tmp_t->next)
 	{
 		if (tmp == tmp_t)
@@ -23,5 +25,4 @@ listint_t *find_listint_loop(listint_t *head)
 		tmp = tmp->next;
 		tmp_t = tmp_t->next->next;
 	}
-	return (NULL);
 }
