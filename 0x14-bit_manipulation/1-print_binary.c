@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <limits.h>
 /**
  * print_binary - print a binary number
  * @n: number to convert to binary
@@ -8,7 +9,7 @@ void print_binary(unsigned long int n)
 {
 	int c, k, s = 0;
 
-	for (c = 50; c >= 0; c--)
+	for (c = (sizeof(int) * 8) - 1 ; c >= 0; c--)
 	{
 		k = n >> c;
 		if (k & 1)
