@@ -32,7 +32,7 @@ int main(int ac, char **av)
 		ans2 = read(ans, buffer, 1024);
 		if (ans2 == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-		else
+		else if (ans2 > 0)
 		{
 			if ((write(ans1, buffer, ans2)) == -1)
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
@@ -41,8 +41,8 @@ int main(int ac, char **av)
 	clo = close(ans);
 	clo1 = close(ans1);
 	if (clo == -1)
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", clo), exit(100);
-        if (clo1 == -1)
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", clo1), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", clo), exit(100);
+	if (clo1 == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", clo1), exit(100);
 	return (0);
 }
