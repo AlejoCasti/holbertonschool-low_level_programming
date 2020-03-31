@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-	int ans, ans1, ans2 = 1;
+	int ans, ans1, ans2 = 1, clo, clo1;
 	char buffer[1024];
 
 	if (ac != 3)
@@ -16,7 +16,7 @@ int main(int ac, char **av)
 		exit(97);
 	}
 	ans = open(av[1], O_RDONLY);
-	if (ans < 0)
+	if (ans == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
@@ -38,7 +38,11 @@ int main(int ac, char **av)
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
 	}
-	close(ans);
-	close(ans1);
+	clo = close(ans);
+	clo1 = close(ans1);
+	if (clo == -1)
+                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", clo), exit(100);
+        if (clo1 == -1)
+                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", clo1), exit(100);
 	return (0);
 }
