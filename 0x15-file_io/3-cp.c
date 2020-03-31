@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-	int ans, ans1, ans2 = 1, clo, clo1;
+	int ans, ans1, ans2 = 1;
 	char buffer[1024];
 
 	if (ac != 3)
