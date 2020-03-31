@@ -21,8 +21,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	ans1 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR |
-		S_IRGRP | S_IWGRP | S_IROTH);
+	ans1 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (ans1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
@@ -39,11 +38,7 @@ int main(int ac, char **av)
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
 	}
-	clo = close(ans);
-	clo1 = close(ans1);
-	if (clo == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", clo), exit(100);
-	if (clo1 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", clo1), exit(100);
+	close(ans);
+	close(ans1);
 	return (0);
 }
