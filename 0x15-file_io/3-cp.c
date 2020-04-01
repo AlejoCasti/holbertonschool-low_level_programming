@@ -37,8 +37,8 @@ int main(int ac, char **av)
 			if ((write(ans1, buffer, ans2)) == -1)
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
-	clo = close(ans);
-	ans2 = close(ans1);
+	ans2 = close(ans);
+	clo = close(ans1);
 	if (clo == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ans), exit(100);
 	if (clo == -1)
