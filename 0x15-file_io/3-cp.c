@@ -33,13 +33,13 @@ int main(int ac, char **av)
 		ans2 = read(ans, buffer, 1024);
 		if (ans2 == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-		else if (ans2 > 0)
+		if (ans2 > 0)
 			if ((write(ans1, buffer, ans2)) == -1)
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
 	ans2 = close(ans);
 	clo = close(ans1);
-	if (clo == -1)
+	if (ans2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ans), exit(100);
 	if (clo == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ans1), exit(100);
