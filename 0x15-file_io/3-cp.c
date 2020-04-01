@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-	int ans, ans1, ans2 = 1, clo, clo1;
+	int ans, ans1, ans2 = 1, clo;
 	char buffer[1024];
 
 	if (ac != 3)
@@ -38,7 +38,7 @@ int main(int ac, char **av)
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
 	clo = close(ans);
-	clo1 = close(ans1);
+	ans2 = close(ans1);
 	if (clo == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ans), exit(100);
 	if (clo == -1)
