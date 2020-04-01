@@ -41,7 +41,7 @@ int main(int ac, char **av)
 	clo1 = close(ans1);
 	if (clo == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ans), exit(100);
-	if (clo1 == -1)
+	if (clo == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ans1), exit(100);
 	return (0);
 }
