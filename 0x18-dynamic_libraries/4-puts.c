@@ -1,11 +1,17 @@
-#include<stdio.h>
+#include "holberton.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * _puts - Print the length string.
+ * @str: Variable to print.
+ * Return: None;
  */
-int main(void)
+void _puts(char *str)
 {
-puts("\"Programming is like building a multilingual puzzle");
-return (0);
+	int contador;
+
+	while (str[contador] != '\0')
+	{
+		_putchar(str[contador]);
+		contador++;
+	}
+	_putchar('\n');
 }
