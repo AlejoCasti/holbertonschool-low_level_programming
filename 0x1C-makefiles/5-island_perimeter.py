@@ -3,6 +3,7 @@
 
 
 def island_perimeter(grid):
+    ''' islando function to get perimeter '''
     width = len(grid[0])
     height = len(grid)
     perimetro = 0
