@@ -12,15 +12,15 @@ int re_bi(size_t Low, size_t Hi, int *array, int value)
 	size_t mid, i;
 	int vmid;
 
-	if (Low == Hi)
-		return (-1);
-	mid = ((Hi - Low) / 2) + Low;
-	vmid = array[mid];
-
 	printf("Searching in array: ");
 	for (i = Low; i < Hi; i++)
 		printf("%i, ", array[i]);
 	printf("%i\n", array[Hi]);
+
+	if (Low == Hi)
+		return (-1);
+	mid = ((Hi - Low) / 2) + Low;
+	vmid = array[mid];
 
 	if (vmid == value)
 		return (mid);
@@ -40,5 +40,7 @@ int re_bi(size_t Low, size_t Hi, int *array, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
+	if (!array)
+		return (-1);
 	return (re_bi(0, size - 1, array, value));
 }
